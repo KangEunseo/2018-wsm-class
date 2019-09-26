@@ -1,0 +1,32 @@
+<html>
+<title>성적처리</title>
+<head><meta charset="utf-8"></head>
+<body>
+  <center><font size=5pt color=green>성적처리결과</font></center>
+<script>
+var score=0, sum=0;
+document.write("<hr color=blue size=3 width=90%>")
+for(j=1;j<=3;j++){
+  name=prompt("이름을 입력하세요","○○○")
+  document.write("<center><font color=blue>"+name+"</font>&nbsp");
+  sum=0;
+  for(i=1;i<=3;i++){
+    score=parseInt(prompt("score","0"))
+    if(0<=score && score<=100){
+      sum+=score;
+      document.write("<font color=red>과목"+i+":"+score+"</font>&nbsp")
+    }
+    else{
+      document.write("<font color=red>과목"+i+":"+score+"올바르게 입력</font>&nbsp")
+    }
+  }
+  document.write("<font color=red>과목 종류:"+3+"</font>&nbsp")
+  document.write("<font color=red>성적 총점:"+sum+"</font>&nbsp");
+  document.write("<font color=green>성적 평균:"+(sum/3)+"</font></center>");
+  if(j<3)
+    document.write("<hr color=skyblue size=2 width=90%><br>")
+}
+document.write("<hr color=blue size=3 width=90%><br>")
+</script>
+</body>
+</html>

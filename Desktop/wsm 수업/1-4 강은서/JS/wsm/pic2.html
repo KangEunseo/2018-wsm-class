@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>pic</title>
+    <script language="javascript" src="js/link.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pic.css">
+    <img src="image/home.png" id="home" onclick=main()>
+    <center>
+      <h1 class="header" onclick=main()>ARCHIVE OF <font class="title">HOON</font></h1>
+    </center>
+  </head>
+  <body>
+    <center>
+    <table>
+      <tr>
+        <td class="tdown"><input type="button" class="button" id="select" value="PIC" onclick=pic1()></td>
+        <td class="tdown"><input type="button" class="button" value="VID" onclick=vid1()></td>
+        <td class="tdown"><input type="button" class="button" value="ART" onclick=art()></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><img src="image/kahki/k1.jpg" width=auto height="200px"></td>
+        <td><img src="image/kahki/k2.jpg" width=auto height="200px"></td>
+        <td><img src="image/kahki/k3.jpg" width=auto height="200px"></td>
+        <td><img src="image/kahki/k4.jpg" width=auto height="200px"></td>
+      </tr>
+      <tr>
+        <td><img src="image/brown/b1.jpg" width=auto height="200px"></td>
+        <td><img src="image/brown/b2.jpg" width=auto height="200px"></td>
+        <td><img src="image/brown/b3.jpeg" width=auto height="200px"></td>
+        <td><img src="image/brown/b4.jpg" width=auto height="200px"></td>
+      </tr>
+      <tr>
+        <td><img src="image/black/1.jpg" width=auto height="200px"></td>
+        <td><img src="image/black/2.jpg" width=auto height="200px"></td>
+        <td><img src="image/black/3.jpg" width=auto height="200px"></td>
+        <td><img src="image/black/4.jpg" width=auto height="200px"></td>
+      </tr>
+    </table>
+    <ul class="page">
+      <li class="page" onclick=pic1()>1</li>
+      <li class="page" id="cho">2</li>
+      <li class="page" onclick=pic3()>3</li>
+    </ul>
+    </center>
+  </body>
+</html>

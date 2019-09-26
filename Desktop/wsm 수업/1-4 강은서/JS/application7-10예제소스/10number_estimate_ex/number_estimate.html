@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<TITLE>숫자 맞추기 </TITLE>
+</HEAD>
+<BODY  style="text-align:center;"  onLoad="document.forms[0].guess.focus();document.forms[0].guess.select()" > 
+    <SCRIPT LANGUAGE="JavaScript">
+        var nGuesses = 0
+        function random() {
+
+        }
+        function GuessNum() {
+            
+        }
+        function GiveUp() {
+
+        }
+
+
+    </SCRIPT>
+    <center>
+        <div class="back">
+                <FORM onSubmit="GuessNum(); return false">
+                    <center>
+                        <b> 숫자 입력: 
+                        <INPUT TYPE="text"   NAME="guess" SIZE=5>
+                        <INPUT TYPE="button"  VALUE=" 맞추기 " onClick="GuessNum();">
+                        <INPUT TYPE="button"   VALUE=" 포  기 " onClick="GiveUp();">
+                        </b> 
+                    </center>
+                </FORM>
+
+                <FORM>
+                    <center>
+                        <b>시도 횟수: 
+                        <INPUT TYPE="text" class = text1 NAME="guesses" SIZE=3>
+                        도움말: 
+                        <INPUT TYPE="text" class = text1 NAME="result" SIZE=12>
+                        </b> 
+                    </center>
+                </FORM>
+        </div>
+    </center>
+</BODY>
+</HTML>
+
+    

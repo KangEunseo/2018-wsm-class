@@ -1,0 +1,59 @@
+<html>
+<title>성적처리</title>
+<head><meta charset="utf-8">
+  <style>
+    div{
+      background-color: yellow;
+      border: solid 2px dodgerblue;
+      border-width: 5px;
+      width: 800px;
+      height: 30pt;
+      text-align: center;
+      color: green;
+      font-size: 30px;
+      padding: 2pt 4pt;
+    }
+  </style>
+</head>
+<body>
+  <center><div>성적처리결과</div></center>
+<script>
+var score=0, sum=0, total=0;
+document.write("<hr color=blue size=3 width=90%>")
+for(j=1;j<=3;j++){
+  name=prompt("이름을 입력하세요","○○○")
+  if(name==""){
+    alert("입력오류입니다. 이름을 넣어주세요.")
+    name=prompt("이름을 입력하세요","○○○")
+  }
+  document.write("<center><font color=blue>"+name+"</font>&nbsp");
+  for(i=1;i<=3;i++){
+    score=parseInt(prompt("score","0"))
+    log_1=isNaN(score)
+    sum=0;
+    if(0<=score && score<=100){
+      sum+=score;
+      total+=score;
+      document.write("<font color=red>과목"+i+":"+score+"</font>&nbsp")
+    }
+    else if(log_1!=false){
+      alert("숫자가 아닙니다. 점수는 숫자(1~100)로 넣어주세요.")
+      document.write("<font color=red>과목"+i+":"+score+"</font>&nbsp")
+    }
+    else{
+      alert("숫자(1~100)로 넣어주세요.")
+      document.write("<font color=red>과목"+i+":"+score+"</font>&nbsp")
+    }
+  }
+  document.write("<font color=red>과목 종류:"+3+"</font>&nbsp")
+  document.write("<font color=red>성적 총점:"+sum+"</font>&nbsp");
+  document.write("<font color=green>성적 평균:"+(sum/3)+"</font></center>");
+  if(j<3)
+    document.write("<hr color=skyblue size=2 width=90%><br>")
+}
+document.write("<hr color=blue size=3 width=90%><br>")
+document.write("<center><div>전체총점:"+total+"&nbsp&nbsp");
+document.write("전체평균:"+(total/9)+"</div></center>");
+</script>
+</body>
+</html>

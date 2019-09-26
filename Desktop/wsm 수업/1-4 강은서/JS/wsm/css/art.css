@@ -1,0 +1,130 @@
+.header{
+  margin: 70px 0 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header:hover{
+  color: lightsalmon;
+}
+.title{
+  color: lightsalmon;
+}
+table.a{
+  width: 623px;
+  height: 603px;
+  padding: 3px;
+  background-color: lightsalmon;
+  margin-bottom: 80px;
+}
+td.a1{
+  background-image: url(../image/art/a1.jpg);
+  background-size: 347px auto;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+}
+td.a2{
+  background-image: url(../image/art/a2.jpg);
+  background-size: 273px auto;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  font-size: 10pt;
+}
+td.a3{
+  background-image: url(../image/art/a3.jpg);
+  background-size: 273px auto;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  font-size: 10pt;
+}
+td.a4{
+  background-image: url(../image/art/a4.jpg);
+  background-size: 347px auto;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  font-size: 10pt;
+}
+td.a5{
+  background-image: url(../image/art/a5.jpg);
+  background-size: 150px 272px;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  font-size: 10pt;
+}
+td.a6{
+  background-image: url(../image/art/a6.jpg);
+  background-size: 150px 272px;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  font-size: 10pt;
+}
+td.a7{
+  background-image: url(../image/art/a7.png);
+  background-size: 173.5px auto;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  width: 173.5px;
+  font-size: 10pt;
+}
+td.a8{
+  background-image: url(../image/art/a8.jpg);
+  background-size: 174px 140px;
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 10px;
+  width: 173.5px;
+  font-size: 10pt;
+}
+#home{
+  width: 30px;
+  height: auto;
+  margin: 0 0 0 1015pt;
+  padding: 30px;
+  position: absolute;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFCEF;
+}
+.button{
+  background-color: #FFFCEF;
+  border: 2px;
+  font-size: 12pt;
+  font-weight: bold;
+  color: black;
+  width: 85px;
+  height: 50px;
+  border-radius: 15px;
+  margin: 0 70px;
+}
+.button:hover{
+  background-color: lightsalmon;
+}
+#select{
+  background-color: lightsalmon;
+  font-size: 14pt;
+}
+td.tdown{
+  background-color: #FFFCEF;
+  width: 200px;
+  height: 160px;
+  padding-top: 15px;
+  text-align: center;
+}
+#from{
+  width: 12pt;
+  height: auto;
+}

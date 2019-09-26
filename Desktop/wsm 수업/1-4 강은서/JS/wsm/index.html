@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>main</title>
+    <script language="javascript" src="js/link.js"></script>
+    <script language="javascript" src="js/audio.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/audio.css">
+    <table>
+      <tr>
+        <td class="audio"><audio id="mp3" src="audio/Wanna One (워너원) - Wanna Be (My Baby) [HAN_ROM_ENG Color Coded Lyrics].m4a"></audio>
+         <table class="mp3">
+           <tr>
+             <td><img class="m" src="image/mp3.png"></td>
+             <td><button onclick=play()><img class="v" src="image/play.png" alt="play"></button></td>
+             <td><button onclick=pause()><img class="v" src="image/pause.png" alt="pause"></button></td>
+             <td><button onclick=reset()><img class="vr" src="image/reset.png" alt="reset"></button></td>
+           </tr>
+         </table>
+        </td>
+        <td id="h"><center><h1 class="header">ARCHIVE OF <font class="title">HOON</font></h1></center></td>
+        <td id="h"></td>
+      </tr>
+    </table>
+    <div class="d">
+      <span class="detail_l">
+        <span onclick="login();">Login</span> &nbsp;&nbsp;&nbsp;
+        <span onclick=join()>Join</span>
+      </span>
+      <span class="detail_r">
+        <span><img src="image/clock.png" class="di" onclick="clock();"></span> &nbsp;&nbsp;&nbsp;
+        <span><img src="image/magic-ball.png" class="di" onclick="onepick();"></span>
+      </span>
+    </div>
+  </head>
+  <body>
+    <center>
+    <table background="image/곰돌윙.jpg">
+      <tr>
+        <td class="tdown"><input type="button" class="button" value="PIC" onclick=pic1()></td>
+        <td class="tdown"><input type="button" class="button" value="VID" onclick=vid1()></td>
+        <td class="tdown"><input type="button" class="button" value="ART" onclick=art()></td>
+      </tr>
+    </table>
+    <div class="footer">
+      @KES
+    </div>
+    </center>
+  </body>
+</html>

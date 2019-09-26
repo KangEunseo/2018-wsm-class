@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+  <style>
+    table.back{
+      border: 2px blue;
+      padding: 16px 32px;
+      text-align: center;
+      background-color: #eaffff;
+    }
+    .button{
+      background-color: #0000ff;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .button:hover{
+      background-color: #008CBA;
+      color: white;
+    }
+  </style>
+<TITLE>동전 맞추기 게임</TITLE>
+  <meta charset="utf-8">
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+function flipCoin() {
+  var x=parseInt(Math.random()*2)
+  coinsrc=(!x)?"coin/coin1.png":"coin/coin2.png";
+  document.coinform.coinbutton.value='...동전을 선택 중입니다.';
+  ID=window.setTimeout("changeCoin();", 3000);
+}
+function changeCoin() {
+  document['coin'].src=coinsrc;
+  document.coinform.coinbutton.value='선택된 동전입니다.';
+}
+</SCRIPT>
+<BODY>
+<center>
+<form name=coinform>
+<table class="back">
+<tr>
+   <td><img name=coin src="num/1.png"><img name=coin src="num/2.png">
+   <img name=coin src="num/3.png"><img name=coin src="num/4.png">
+   <img name=coin src="num/5.png"><br><img name=coin src="num/6.png">
+   <img name=coin src="num/7.png"><img name=coin src="num/8.png">
+   <img name=coin src="num/9.png"><img name=coin src="num/0.png"></td>
+</tr>
+<tr>
+<td align=center><input type=button class="button" name=coinbutton value="선택 시작" onclick="flipCoin();"></td>
+</tr>
+</table>
+</form>
+<table class="back" width="700" height="120" border="0" cellspacing="2" cellpadding="2">
+  <tr><td align="center" valign="middle" height="34" bgcolor="#0000ff">
+    <font size="4" color="white">** 게임 설명 **</font>
+  </td></tr>
+  <tr><td bgcolor="#3399ff">
+    1.아라비아 숫자를 이용해 어느 숫자가 나오는지 알아 맞추는 내기 게임입니다.
+    <br>
+    2.어느 숫자가 나올지 3초 안에 예측하고 맞추는 사람이 여러분이 정한 혜택을 받습니다.
+    <br>
+    3.처음부터 하려면 초기화 단추를 다시 누르면 됩니다.
+  </td></tr>
+</table>
+</center>
+</BODY>
+</HTML>

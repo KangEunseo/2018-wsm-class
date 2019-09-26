@@ -1,0 +1,29 @@
+button{
+  width: 23px;
+  height: 23px;
+  padding: 1px 2.5px;
+  border: 0;
+  background-color: #fff;
+}
+img{
+  margin: 2px;
+}
+img.m{
+  width: 27px;
+  height: auto;
+  margin: 10px 5px 10px 15px;
+}
+img.v{
+  width: 11px;
+  height: auto;
+}
+img.vr{
+  width: 8px;
+  height: auto;
+}
+table.mp3{
+  background-color: rgb(240, 240, 185);
+  margin-left: 30px;
+  width: 166px;
+  border-radius: 10px;
+}

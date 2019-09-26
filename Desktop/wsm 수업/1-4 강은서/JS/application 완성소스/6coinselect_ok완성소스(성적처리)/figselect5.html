@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+  <TITLE>숫자 맞추기 게임</TITLE>
+  <meta charset="utf-8">
+</HEAD>
+<style>
+    .button {
+        background-color: greenyellow;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: green;
+        color: white;
+    }
+    .text1{
+        background-color:lightgoldenrodyellow;
+        border: none;
+        font-family: fantasy;
+        color: forestgreen;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+    }
+    table.back{
+        align-content: center;
+        padding: 16px 32px;
+        text-align: center;
+        background-color:yellow;
+        
+    } 
+    tr.fore{
+    background-color:magenta;
+    }
+    /* www.w3schools.com - CSS Display/Visibility 참조 */
+
+    .mystyle {
+    visibility: hidden;
+    }
+
+</style>
+    <SCRIPT>
+        function flipCoin() {
+            var x = parseInt(Math.random() * 9 + 1, 10);
+            //coinsrc = (!x) ? "money/coin1.png" : "money/coin2.png";
+            switch(x)
+            {
+                case 1 : coinsrc = "num/1.png" ;break
+                case 2 : coinsrc = "num/2.png" ;break
+                case 3 : coinsrc = "num/3.png" ;break
+                case 4 : coinsrc = "num/4.png" ;break
+                case 5 : coinsrc = "num/5.png" ;break
+                case 6 : coinsrc = "num/6.png" ;break
+                case 7 : coinsrc = "num/7.png" ;break
+                case 8 : coinsrc = "num/8.png" ;break
+                case 9 : coinsrc = "num/9.png" ;break
+                case 0 : coinsrc = "num/0.png" ;break
+                default : alert("입력오류")
+            }
+            document.coinform.face.value='....숫자를 선택 중입니다....';
+            ID = window.setTimeout("changeCoin();", 3000);
+        }
+        function changeCoin() {
+            document['coin'].src = coinsrc;
+            document.coinform.face.value='선택된 숫자입니다.';  
+        }
+        function first() {
+            document['coin'].src = coinsrc;
+            document['coin'].src = "num/sum1.jpg";
+            document.coinform.face.value='초기화되었습니다~';
+        }
+
+        //w3schools - css- toggle참조
+        function myFunction() {
+            var element = document.getElementById("myDIV");
+            element.classList.toggle("mystyle");
+        }
+
+    </SCRIPT>
+<BODY>
+    <center>
+        <form name=coinform>
+            <table class="back" >
+                <tr>
+                    <br><br><br><img align=center  src="num/images.jpg" width=300 height=100><br><br>
+                </tr>
+                <tr align=center class="fore">
+                    <td ><img align=center name=coin src="num/sum1.jpg"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type=button name=coinbutton value="선택 시작" onclick="flipCoin();">
+                    <input class="button" type=button name=coinbutton value="초기화" onclick="first();"></td>
+                </tr>
+            </table>
+            <input class="text1" type = "text" size = 25 name = "face" value = "">
+        </form>
+
+
+        <button class=button  onclick="myFunction()">게임메뉴얼 보이기/숨기기</button>
+
+
+
+        <div id="myDIV"> 
+
+
+        <TABLE   width="750" height=120 border="0" cellspacing="2" cellpadding="2">
+            <TR> 
+                <TD align="center" valign="middle" height="34" bgcolor="lightgreen">
+                    <FONT size="4" color="white">
+                    ** 게임 설명 **
+                    </FONT>
+                </TD>
+            </TR>
+            <TR>
+                <TD bgcolor="green">
+                    &nbsp;&nbsp;1. 아라비아 숫자를 이용해 어느숫자가 나오는지 알아 맞추는 내기 게임입니다.
+                    <BR>
+                    &nbsp;&nbsp;2. 어느숫자가 나올지를 2~3안에 예측하고 맞추는 사람이 여러분이 정한 혜택을 받습니다.^**^~
+                    <BR>
+                    &nbsp;&nbsp;3. 처음부터 하려면 초기화 단추를 다시 누르면 됩니다.
+                </TD>
+            </TR>
+        </TABLE>
+
+        </div>
+
+    </center> 
+</BODY>
+</HTML>
+
+    

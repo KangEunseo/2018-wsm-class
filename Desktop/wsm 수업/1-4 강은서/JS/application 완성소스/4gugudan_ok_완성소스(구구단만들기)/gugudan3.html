@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>구구단 게임</title>
+ </head>
+ <style>
+    body {
+        color:blue;
+        font-size: 30px;
+        background-color: lightblue;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-image: url("99.jpg");
+        background-size: 100% 100%;
+        background-position: center; 
+        background-attachment: fixed;
+        
+    }
+    .button1 {
+        background-color: lightgoldenrodyellow;
+        border: 1px solid lightyellow;
+        color: deeppink;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 25px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .button1:hover {
+        background-color: whitesmoke;
+        background-color: magenta;
+        color: white;
+    }
+    div{   
+        background-color: blue;
+        border: 1px solid lightgray;
+        color: yellow;
+        padding: 16px 16px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 25px;
+        margin: 4px 2px;
+        width: 500px;
+        border-radius: 8px;
+    }
+ </style>
+<body> 
+ <center><div>구구단을 하자~ 구구단을 하자~</div></center>
+
+    <script> 
+        function myFunction() {
+        document.write("<center>");
+        count=0;
+
+        n=10
+        for (i=1; i<11; i++)
+        {
+            num_1=parseInt(Math.random()*8+2)
+            num_2=parseInt(Math.random()*9+1)
+            num_3=prompt(num_1+"*"+num_2+"=")
+
+            if (num_3==num_1*num_2){ 
+                alert(i+"번째 문제/총"+n+"문항\n\n정답입니다")
+                document.write("<font color=blue size=5>"+num_1+"*"+num_2+"="+num_3+"정답<br></font>")
+                count++;
+            }else{
+                alert(i+"번째 문제/총"+n+"문항\n\n틀렸습니다 다시 공부하십시오")
+                document.write("<font color=green size=5>"+num_1+"*"+num_2+"="+num_3+"오답<br></font>")
+            }
+        }
+
+            document.write("<br><font color=red size=5>당신의 점수 = "+count*10+"입니다</font>");
+
+            
+            if(count*10 > 99){
+                document.write("<br><font color=magenta size=5>완벽해요!^**^!~</font></center>");
+            }else if(count*10 > 79){
+                document.write("<br><font color=magenta size=5>잘했어요!^^!~</font></center>");
+            }else{
+                document.write("<br><font color=magenta size=5>힘내고 다시 한번 도전!^**^!~</font></center>");
+            }
+            
+
+        }//function myFunction() {짝궁
+
+    </script>
+    <button class= button1 type=button onclick="myFunction()">게임시작</button>
+ </body>
+</html>

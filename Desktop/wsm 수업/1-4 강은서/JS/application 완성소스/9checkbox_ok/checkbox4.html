@@ -1,0 +1,171 @@
+<HTML>
+<head>
+	<TITLE>체크박스 선택하기</TITLE> 
+	<meta charset="utf-8"> 
+</head>
+<body>
+	<style>
+		.button1 {
+			background-color: white; 
+			border: 2px solid #008CBA;
+			color: black; 
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		.button1:hover {
+			background-color: #008CBA;
+			color: white;
+		}
+
+		.button2 {
+			background-color: white; 
+			border: 2px solid #1b9243;
+			color: black; 
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+		}
+		.button2:hover {
+			background-color: #1b9243;
+			color: white;
+		}
+
+
+
+		.b{
+			background-color: #ccffff; /* 하늘색 */
+			border: 2px solid #6600ff;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			border: 2px solid #008CBA;
+			font-weight:bold ;color:blue; font-size:30;
+			padding: 5px;
+		}
+
+		table.a{
+			font-style: bold; font-weight:bold ;color:blue; font-size:15; background-color:#eaffff;
+		} 
+		tr.f{
+			background-color:#3399ff;
+		}
+
+		font.c{
+			text-shadow: 0.1em 0.1em 0.1em #ccffff; color:blue;
+			font-weight:bold ;text-align: center;padding: 20px 20px 20px 10px; font-size:35
+		}
+
+		hr.d{
+			border-color: #66ccff; WIDTH:60%;
+		}
+	</style>
+
+	<SCRIPT>
+	var total = 0//체크된 개수
+	var play = false
+	// react to a click in a checkbox (element == clicked checkbox object)
+		function display(element) {	
+		// Date object 생성
+				var now = new Date()	
+			// game 이 아직 시작되지 않았다면
+				if (!play) {		
+				// 지금 game 시작			
+					play = true		
+				//시간이 시작된 이후 1970년 이후 milliseconds 사용 		
+					startTime = now.getTime()	
+				}	
+			// startTime의 수치를 조절하면 시간 조절 가능. 1000이 1초임.	
+				if (now.getTime() - startTime > 30000) {
+					// 시간이 지나면 더이상 체크되지 않도록 (make "read-only")			
+					element.checked = !element.checked	//체크된것을 반대로 체크되지 않도록 하여 넣음	
+					// 함수종료
+					return
+				}	
+			// 시간이 지나지 않은 경우에 체크되고 카운트함
+				if (element.checked)		
+					// increment total		
+						total++
+				else		
+					// 체크된것을 또 체크하면 마이너스카운트 decrement total		
+						total--	
+					// display total in text object	
+						element.form.num.value = total
+		}
+		function restart(form) {	
+			// global variables를 초기화	
+				total = 0	
+				play = false	
+			// uncheck all 255 checkboxes	
+				for (var i = 1; i <= 255; ++i) {		
+					// uncheck current checkbox		
+					form.elements[i].checked = false	
+				}
+		}
+
+
+		// 즉각적인 스크립트 (지연되기 때문에 다른 스크립트보다 먼저 실행 됨)
+		document.write("<FORM><CENTER>")
+		document.write('<HR class="d">')
+		document.write('<font class="c">점  수</font>')
+		document.write('<INPUT TYPE="text" class="b" VALUE="0" NAME="num" SIZE=3  onFocus="this.blur()"><BR>')
+		document.write('<HR class="d">')
+		document.write('<table class="a"><tr><td>')
+		document.write("</font>")
+		// click in the checkbox, and then click outside the field to lose focus (blur).
+
+	// use loop to create a 15 x 15 square of checkboxes
+		for (var i = 0; i < 15; ++i) {	
+			for (var j = 0; j < 15; ++j) {		
+				// write checkbox with "display(this)" as event handler script		
+				document.write('<INPUT TYPE="checkbox" onClick="display(this)">')	
+			}	
+			document.write("<BR>")
+		}
+		document.write('</td></tr></table>')
+		document.write('<HR class="d">')
+		// create button to call restart function to restart game 
+
+			document.write('<INPUT class="button1" TYPE="button" VALUE="게임시작" onClick="restart(this.form)">')
+			document.write('<INPUT class="button2" TYPE="reset" VALUE="초기화" onClick="reset()">')
+			document.write("</CENTER></FORM>")
+
+	</SCRIPT>
+	<CENTER> 
+		<TABLE class="a" width="600" border="0" cellspacing="5" cellpadding="5">
+		<TR class="f"> 
+			<TD align="center" valign="middle" height="24">
+				<FONT size="4" color="white">
+				** 프로그램 설명 **
+				</FONT>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				1. 30초 안에 얼마나 많은 체크박스에 체크할 수 있는지 겨루는 게임입니다.
+				<BR>
+				2. 마우스 누르는 속도를 향상시켜주는 프로그램입니다.
+			</TD>
+		</TR>
+		</TABLE>
+	</CENTER> 
+</BODY>
+</HTML>
+
+    

@@ -1,0 +1,44 @@
+<html>
+  <head><html>
+      <head>
+        <meta charset=utf-8>
+        <title>vid</title>
+        <script language="javascript" src="js/link.js"></script>
+        <script language="javascript" src="js/vid.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/vid.css">
+        <img src="image/home.png" id="home" onclick=main()>
+        <center>
+          <h1 class="header" onclick=main()>ARCHIVE OF <font class="title">HOON</font></h1>
+        </center>
+      </head>
+      <body>
+        <center>
+        <table>
+          <tr>
+            <td class="tdown"><input type="button" class="button" value="PIC" onclick=pic1()></td>
+            <td class="tdown"><input type="button" class="button" id="select" value="VID"></td>
+            <td class="tdown"><input type="button" class="button" value="ART" onclick=art()></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td class="a"><video src="vid/약속해요_티저.mp4" id="vid"></video>
+             <button onclick="play();" class="v"><img class="v" src="image/play.png" alt="play"></button>
+             <button onclick="pause();" class="v"><img class="v" src="image/pause.png" alt="pause"></button>
+             <button onclick="reset();" class="v"><img class="vr" src="image/reset.png" alt="reset"></button></td>
+          </tr>
+          <tr>
+            <td class="a"><video src="vid/부메랑_티저.mp4" id="vid1"></video>
+             <button onclick="play1();" class="v"><img class="v" src="image/play.png" alt="play"></button>
+             <button onclick="pause1();" class="v"><img class="v" src="image/pause.png" alt="pause"></button>
+             <button onclick="reset1();" class="v"><img class="vr" src="image/reset.png" alt="reset"></button></td>
+          </tr>
+        </table>
+        <ul class="page">
+          <li class="page" onclick=vid1()>1</li>
+          <li class="page" id="cho">2</li>
+          <li class="page" onclick=vid3()>3</li>
+        </ul>
+        </center>
+      </body>
+    </html>

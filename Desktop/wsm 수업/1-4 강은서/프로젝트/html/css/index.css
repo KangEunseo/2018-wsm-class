@@ -1,0 +1,67 @@
+.audio{
+  vertical-align: top;
+}
+audio{
+  width: 300px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border-radius: 10pt;
+}
+.header{
+  padding: 60px 0 0 398.2px;
+  margin-bottom: 20px;
+}
+.header:hover{
+  color: lightsalmon;
+}
+.title{
+  color: lightsalmon;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFCEF;
+}
+.button{
+  background-color: #FFFCEF;
+  border: 2px;
+  font-size: 13pt;
+  font-weight: bold;
+  color: black;
+  width: 85px;
+  height: 50px;
+  border-radius: 15px;
+  margin: 15px 70px 320px 70px;
+}
+.button:hover{
+  background-color: lightsalmon;
+}
+td.tdown{
+  width: 200px;
+  text-align: center;
+}
+table{
+  background-size: 500pt 313pt;
+  background-repeat: no-repeat;
+}
+.footer{
+  margin: 40px 0 30px 0;
+  text-align: center;
+  font-size: 14pt;
+  color: gray;
+}
+.detail_l{
+  clear: left;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 0 18.5%;
+  font-size: 13.3pt;
+}
+.detail_r{
+  margin: 0 0 0 49%;
+}
+.di{
+  width: 23px;
+  height: auto;
+}
+div.d{
+  margin-bottom: 20px;
+}

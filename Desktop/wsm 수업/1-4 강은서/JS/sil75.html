@@ -1,0 +1,26 @@
+<html>
+  <head><title>내장 객체</title></head>
+  <body>
+    <script language="javascript">
+      // 배열선언
+      arr_1=new Array("html","css","java","flash")
+      arr_2=new Array(5,3,1,4,2)
+      arr_3=new Array()
+      arr_4=new Array()
+
+      // join() 메소드
+      document.write(arr_1.join()+"<br>")
+      document.write(arr_1.join("+")+"<p>")
+
+      // sort(), reverse() 메소드
+      document.write(arr_1.reverse()+"<br>")
+      document.write(arr_2.sort()+"<p>")
+
+      // concat(), slice() 메소드
+      arr_3=arr_1.concat(arr_2)
+      document.write(arr_3.join()+"<br>")
+      arr_4=arr_2.slice(2,4)
+      document.write(arr_4.join())
+    </script>
+  </body>
+</html>

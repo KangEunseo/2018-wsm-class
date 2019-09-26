@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta charset="utf-8">
+	<style>
+		* {
+			margin:0;padding:0;
+		}
+		html, body{
+			width:100%;height:1000px;
+		}
+		
+		@font-face {
+			font-family: NanumSquareWeb;
+			src: local(NanumSquareR),
+			local(NanumSquare),
+			url(NanumSquareR.eot?#iefix) format('embedded-opentype'),
+			url(NanumSquareR.woff) format('woff'),
+			url(NanumSquareR.ttf) format('truetype');
+			font-style: normal;
+			font-weight: normal;
+			unicode-range: U+0-10FFFF;
+		}
+	
+		.cover{
+			width:100%;
+			height:100%;
+			color:#fff;
+			font-size:24px;
+			position:absoulut;
+			font-family:"Courier New", Courier, monospace;
+			background:url(https://i.imgur.com/GqMICtx.jpg) center center/cover no-repeat;
+		}
+		.logo{
+			position:relative;
+			left:30px;top:30px;
+			color:#660000;
+		}
+		.content h2{
+			font-size:2em;text-align:center; 
+			font-family: NanumSquareWeb, sans-serif;
+		}
+		.content hr{
+			width:40%;
+			margin:30px auto;
+		}
+		.content p{
+	
+			font-size:38px;
+			font-family:"Courier New", Courier, monospace;
+	
+			margin: 0;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.copy{
+			position:fixed;
+			left: 80%; bottom:50px;
+			color:#cc9900;
+		}
+	</style>
+	<script>
+	var countDown=new Date("DEC 31, 2018 23:59:59").getTime();
+		var x= setInterval(function(){
+		var now=new Date().getTime();
+		var distance=countDown-now;
+		var days=Math.floor(distance/(1000*60*60*24));
+		var hours=Math.floor((distance %(1000*60*60*24))/ (1000*60*60));
+		var minutes = Math.floor((distance %(1000*60*60))/ (1000*60));
+		var seconds = Math.floor((distance %(1000*60))/ 1000);
+		document.getElementById("count").innerHTML = " "+days+"Days&nbsp;"+hours+"Hours&nbsp;"+minutes+"Minutes&nbsp;"+seconds+"Seconds";
+			if(distance<0){
+				clearInterval(x);
+				document.getElementById("count").innerHTML="Happy New Year!!!"
+			} 
+		},1000);
+	</script>
+</head>
+<body>
+    <section class="cover">
+        <h1 class="logo">Logo</h1>
+        <div class="content">
+            <h2>COMING SOON</h2>
+            <hr>
+            <p id="count"></p>
+        </div>
+        <p class="copy">SunHee&Copyright.</p>
+    </section>
+</body>
+</html>

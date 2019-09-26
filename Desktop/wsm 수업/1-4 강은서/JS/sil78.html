@@ -1,0 +1,21 @@
+<html>
+  <head><title>내장 객체</title>
+  </head>
+  <body>
+    <script>
+      today=new Date()
+
+      document.write("<지금 현재 시스템의 날짜와 시간>"+"<p>")
+      document.write("년도 = "+today.getFullYear()+"<br>")
+      document.write("월 = "+(today.getMonth()+1)+"<br>")
+      document.write("일 = "+today.getDate()+"<br>")
+      document.write("요일 = "+today.getDay()+"<br>")
+      document.write("시간 = "+today.getHours()+"시 ")
+      document.write(today.getMinutes()+"분 "+today.getSeconds()+"초<p>")
+      
+      document.write("<날짜 시간 표시의 다른 방법><p>")
+      document.write(today.toLocaleString()+"<br>")
+      document.write(today.toString())
+    </script>
+  </body>
+</html>

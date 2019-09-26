@@ -1,0 +1,23 @@
+<html>
+  <head><title>함수호출</title>
+  <script language="javascript">
+    function askOption(question) {
+      ans=confirm(question)
+        if(ans==true)
+          return("조와요 이제 때리세융")
+        else if(ans==false)
+          return("안돼요 때리세융")
+    }
+  </script>
+  </head>
+
+  <body>
+    <center>
+    <script language="javascript">
+      answer=askOption("지민이 때리기에 찬성하면 확인, 반대하면 취소를 누르세요.")
+      document.write("<h1>지민이 때리기</h1>")
+      document.write("<h2><b>"+answer+"</b></h2>")
+    </script> 
+    </center>
+  </body>
+</html>

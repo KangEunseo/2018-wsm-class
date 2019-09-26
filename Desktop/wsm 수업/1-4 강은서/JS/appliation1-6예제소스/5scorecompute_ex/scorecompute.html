@@ -1,0 +1,22 @@
+<html>
+<title>성적처리</title>
+<head><meta charset="utf-8"></head>
+<body>
+<script>
+var score=0, cnt=1, sum=0;
+while(cnt<=5){
+  score=parseInt(prompt("score","0"))
+  if(0<=score && score<=100){
+    sum+=score;
+    document.write("NO"+cnt+":"+score+"<br>")
+    cnt+=1;
+  }
+  else{
+    document.write("No"+cnt+":점수"+score+"올바르게 입력<br>")
+  }
+}
+document.write("학생의 성적 총점:"+sum+"<br>");
+document.write("학생의 성적 평균:"+(sum/5));
+</script>
+</body>
+</html>

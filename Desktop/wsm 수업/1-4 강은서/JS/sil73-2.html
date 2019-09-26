@@ -1,0 +1,22 @@
+<html>
+  <head><title>함수호출</title>
+    <style>input{color:purple}</style>
+    <script language="javascript">
+      function buttonClick(button){
+        alert(button.value+"을 주문하였습니다.");
+      }
+    </script>
+  </head>
+
+  <body>
+  <center>
+    <h2>====== Order ======</h2>
+    <input type="submit" value="망고" onclick="buttonClick(this)">
+    <input type="submit" value="수박" onclick="buttonClick(this)">
+    <input type="submit" value="딸기" onclick="buttonClick(this)">
+    <input type="submit" value="메론" onclick="buttonClick(this)">
+    <input type="submit" value="바나나" onclick="buttonClick(this)">
+    <input type="submit" value="귤" onclick="buttonClick(this)">
+  </center>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body{
+background-color:tan;} 
+.box{
+background-color:#ffff33;
+height:350px;
+width:290px;
+border-radius:10px;
+position:relative;
+top:50px;
+} 
+.display{
+background-color:#006666;
+width:220px;
+position:relative;
+left:10px;
+top:20px;
+height:40px;}
+.display input{
+position:relative;
+left:2px;
+top:2px;
+height:35px;
+color:black;
+background-color:#ccffff;
+width:215px;
+font-size:21px;
+text-align:right;}
+.keys{
+position:relative;
+top:15px;}
+.button{
+width:40px;
+height:30px;
+border:none;
+border-radius:8px;
+margin-left:17px;
+cursor:pointer;
+border-top:2px solid transparent;}
+.button.gray{
+color:white;
+background-color:#9d9d9d; 
+border-top: lightgray 2px solid;
+border-bottom:black 2px solid;
+}
+.button.aqua{
+color:yellow;
+background-color:aqua;
+border-top: blue 2px solid;
+border-bottom:black 2px solid;
+}
+.button.blue{
+color:white;
+background-color:blue;
+border-top:2px aqua solid;
+border-bottom:red 2px solid;
+}
+.button.red{
+color:black;
+background-color:red;
+border-top:2px FF9933 solid;
+border-bottom:black 2px solid;
+}
+.gray:active{
+border-top:black 2px solid;
+border-bottom:2px white solid;}
+.aqua:active{
+border-top:black 2px solid;
+border-bottom:white 2px solid;}
+.blue:active{
+border-top:black 2px solid;
+border-bottom:white 2px solid;}
+.orange:active{
+border-top:black 2px solid;
+border-bottom:white 2px solid;}
+p{
+line-height:10px;
+}

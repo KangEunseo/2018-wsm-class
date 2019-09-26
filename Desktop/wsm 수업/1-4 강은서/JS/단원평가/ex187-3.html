@@ -1,0 +1,30 @@
+<html>
+  <meta charset="utf-8">
+  <head><title></title>
+    <h3>구구단을 하자~ 구구단을 하자~</h3>
+    <script>
+
+      var count=0;
+      for(i=1;i<11;i++){
+        num1=parseInt(Math.random()*9+1)
+        num2=parseInt(Math.random()*9+1)
+        num3=prompt(num1+" * "+num2+" = ","")
+
+        if(num3==num1*num2){
+          alert("정답입니다.")
+          document.write(num1+" * "+num2+" = "+num3+" 정답<br>")
+          count++;
+        }
+        else{
+          alert("틀렸습니다. 공부하세요~")
+          document.write(num1+" * "+num2+" = "+num3+" 오답<br>")
+        }
+      }
+
+      document.write("<br>당신의 점수 = "+count*10)
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

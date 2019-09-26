@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <meta charset="UTF-8">  <title>clock</title>
+  <style>
+    .button1{
+      background-color:blue; border:none; color:white; padding:16px 32px;
+      text-align: center; text-decoration:none;
+    }
+    .button1:hover{
+      background-color:#33ffff; color:white;
+    } 
+  </style>
+  <script>
+  var timerID = null
+
+  function showtime(){
+		var now = new Date();
+		var hours =  now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+		var timeValue = "" + ((hours > 12) ? hours - 12 : hours);
+		timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+		timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+		timeValue += (hours > 12) ? " P.M." : " A.M."
+		clock.face.value = timeValue
+		timerID = setTimeout("showtime()" , 1000)
+  }
+    function stopclock(){
+		clearTimeout(timerID)  
+	}
+  </script>
+ </head>
+ <body bgcolor = "#FFFF00">
+	<center>
+	<form name = "clock">
+		<input type = "text" size = 15 name = "face" value = "">
+		<input type = "button" value = "move" onclick = "showtime()" class="button1">
+		<input type = "button" value = "stop" onclick = "stopclock()" class="button1">
+	</form>
+	</center>
+ </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+  <meta charset="utf-8">
+  <head><title>현재 페이지 출력</title>
+    <script>
+      function printpage(){
+        window.print()
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      window.defaultStatus="여기에 오신걸 환영합니다."
+      document.write("윈도우의 상태표시줄을 보세요.<p>")
+      document.write("자바스크립트 관련 문법입니다.")
+      document.confirm("자료를 출력하시겠습니까?")
+      if(answer=true){
+        printpage()
+      }
+      else{
+        alert("자료 출력을 취소하셨습니다.")
+      }
+    </script>
+  </body>
+</html>

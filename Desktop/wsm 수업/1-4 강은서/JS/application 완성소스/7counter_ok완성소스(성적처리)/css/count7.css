@@ -1,0 +1,39 @@
+	* {
+		margin:0;padding:0;}
+		html, body{width:100%;height:1000px;}
+	.cover{
+		width:100%;
+		height:100%;
+
+		font-size:24px;
+		position:absoulut;
+		font-family:"Courier New", Courier, monospace;
+		background:url(../img/comingSoon.jpg) center center/cover no-repeat; /* ../img  는 상위디렉토리라는 의미*/
+		/* background:url(img/comingSoon.jpg) center center/cover no-repeat;  경로가 안맞으면 안됨 */
+    }
+	.logo{
+		position:relative;
+		left:30px;top:30px;
+		color:#660000;
+	}
+    .content h2{
+        font-size:2em;text-align:center;color:#0000ff;
+    }
+    .content hr{
+        width:40%;
+        margin:30px auto;
+    }
+    .content p{
+        color:#0000ff;
+        font-size:38px;
+		font-family:"Courier New", Courier, monospace;
+		margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+	.copy {
+		position:fixed;
+		left: 80%; bottom:50px;
+		color:#cc9900;
+	}

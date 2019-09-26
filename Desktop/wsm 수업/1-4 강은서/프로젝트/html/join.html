@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>join</title>
+    <script language="javascript" src="js/link.js"></script>
+    <script language="javascript" src="js/delete.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <img src="image/home.png" id="home" onclick=main()>
+    <div class="title">Sign up</div>
+    <hr class="line" noshade>
+  </head>
+  <body>
+    <form>
+      <p><span class="f">ID</span> <input type="text" value="아이디" name="i" onclick="del(1);"></p>
+      <p><span class="f">PW</span> <input type="text" value="비밀번호" name="i" onclick="del(2);"></p>
+      <p><span class="f">NAME</span> <input type="text" value="이름" name="i" onclick="del(3);"></p>
+      <p><span class="f">Tel.</span> <input type="text" value="전화번호" name="i" onclick="del(4);"></p>
+      <p><span class="f">E-mail</span> <input type="text" value="이메일주소" name="i" onclick="del(5);"></p>
+      <p><input type="button" value="회원가입" class="b" onclick=al()>
+        <input type="button" value="가입취소" class="b" onclick=main_()></p>
+    </form>
+    <hr class="fin" noshade>
+  </body>
+</html>

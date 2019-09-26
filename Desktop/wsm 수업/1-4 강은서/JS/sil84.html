@@ -1,0 +1,21 @@
+<html>
+  <head><title></title>
+    <script>
+      function href_01(){
+        url=location.href
+        document.write("현재 URL = "+url)
+      }
+      function href_02(){
+        url=prompt("이동하고싶은 url을 입력하세요","")
+        location.href=url
+      }
+    </script>
+  </head>
+
+  <body>
+    <h3>location 객체 활용하기</h3>
+    <p>
+      <input type="button" value="현재 URL" onclick="href_01()">
+      <input type="button" value="이동할 URL" onclick="href_02()">
+  </body>
+</html>

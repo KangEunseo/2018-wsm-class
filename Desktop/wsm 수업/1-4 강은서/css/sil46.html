@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>목록 스타일 적용</title>
+<meta charset="UTF-8">
+
+<style type="text/css">
+.cir{list-style-type: circle; list-style-position: inside}
+.img{list-style-image: url("image/but01.jpg"); list-style-position: outside}
+.low{list-style-type: lower-alpha; list-style-position: inside}
+</style>
+
+</head>
+<body>
+  <h3>애완동물</h3>
+  <ul class="cir">
+    <li>강아지</li>
+    <li type="A">거북이 <!-- <ul>태그에 있어 순서 있는 "A"값을 설정해도 효과가 없어요. --></li>
+    <li class="img">고양이
+    <li class="low">앵무새 <!-- <ul>태그에 있지만 순서 있는 목록으로 효과가 나타나요. -->
+  </ul>
+  <h3>여름 과일</h3>
+  <ol start=3>
+    <li>수박
+    <li class="low">복숭아</li>
+    <li>자두
+  </ol>
+</body>
+</html>

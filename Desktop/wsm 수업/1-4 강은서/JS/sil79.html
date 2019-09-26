@@ -1,0 +1,28 @@
+<html>
+  <head><title></title>
+  </head>
+  <body>
+    <script>
+      document.write("Math 객체의 메소드 사용하기"+"<p>")
+
+      num_1=Math.PI
+      document.write(num_1+"<br>")
+      document.write(Math.round(num_1)+"<p>")
+
+      document.write(Math.sin(0)+"<br>")
+      document.write(Math.abs(-23.45)+"<br>")
+      document.write(Math.exp(10)+"<br>")
+      document.write(Math.log(10)+"<br>")
+      document.write(Math.sqrt(25)+"<br>")
+      document.write(Math.pow(2,5)+"<br>")
+      document.write(Math.max(10,3)+"<br>")
+      document.write(Math.min(10,3)+"<p>")
+
+      document.write("메서드 이용 1에서 10까지 난수 만들기"+"<p>")
+      for(i=1;i<=10;i++){
+        num_2=parseInt(Math.random()*10+1)
+        document.write("1에서 10까지 임의수 = "+num_2+"<br>")
+      }
+    </script>
+  </body>
+</html>

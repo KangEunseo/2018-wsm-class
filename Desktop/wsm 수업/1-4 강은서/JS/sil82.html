@@ -1,0 +1,34 @@
+<html>
+  <head><title>배경색 바꾸기</title>
+    <script>
+      function bg_color(col){
+        document.bgColor=col
+      }
+      function fg_color(col){
+        document.fgColor=col
+      }
+    </script>
+  </head>
+
+  <body>
+    <center><font size=5pt>
+    <p>
+    문서의 배경색을 선택하세요.
+    <input type="radio" name="bgcolor" onclick="bg_color('yellow')">yellow&nbsp;
+    <input type="radio" name="bgcolor" onclick="bg_color('green')">green&nbsp;
+    <input type="radio" name="bgcolor" onclick="bg_color('red')">red&nbsp;
+    </p>
+
+    <p>
+    문서의 글자색을 선택하세요.
+    <input type="radio" name="fgcolor" onclick="fg_color('blue')">blue&nbsp;
+    <input type="radio" name="fgcolor" onclick="fg_color('orange')">orange&nbsp;
+    <input type="radio" name="fgcolor" onclick="fg_color('purple')">purple&nbsp;
+    </p>
+
+    <script>
+      document.write("문서타이틀 = "+document.title+"<p>")
+    </script>
+    </font></center>
+  </body>
+</html>

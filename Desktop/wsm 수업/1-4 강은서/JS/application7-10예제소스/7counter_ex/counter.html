@@ -1,0 +1,33 @@
+<html>
+<meta charset="utf-8">
+    <script>
+        //DEC. SEPT. OCT. MAY. JUN. NOV. JUL. AUG. MAR. APR. JAN. FEB.
+        //var countDown=new Date("DEC 31, 2018 23:59:59").getTime();
+        var countDown=new Date("OCT 4, 2018 9:48:30").getTime();
+        var x= setInterval(function(){
+            var now=new Date().getTime();
+            var distance=countDown-now;
+            //시간을 초로 바꾸는 공식    
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance %(1000*60*60*24))/ (1000*60*60));
+            var minutes = Math.floor((distance %(1000*60*60))/ (1000*60));
+            var seconds = Math.floor((distance %(1000*60))/ 1000);
+            //시간을 초로 바꾸는 공식 
+            document.getElementById("count").innerHTML = " "+days+"D"+hours+"H"+minutes+"M"+seconds+"s";
+                if(distance<0){
+                    clearInterval(x);
+                    document.getElementById("count").innerHTML="카운트 다운 종료"
+                } 
+        },1000);
+    </script>
+<body>
+    <br><br><br><br><br>
+    <p id="count"></p>
+</body>
+</html>
+
+
+
+
+
+

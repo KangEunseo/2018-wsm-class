@@ -1,0 +1,30 @@
+<html>
+  <head><title>내장 객체</title>
+    <script>
+      var timeID=null
+      function showtime(){
+        var now=new Date()
+        var hours=now.getHours()
+        var minutes=now.getMinutes()
+        var seconds=now.getSeconds()
+        var timeValue=hours;
+        timeValue+=((minutes<10)?":0":":")+minutes;
+        timeValue+=((seconds<10)?":0":":")+seconds;
+        timeValue+=(hours>12)?" PM":" AM"
+        clock.face.value=timeValue
+        timeID=setTimeout("showtime()",1000)
+      }
+      function stopclock(){
+        clearTimeout(timeID)
+      }
+    </script>
+  </head>
+
+  <body bgcolor="yellow">
+    <form name="clock">
+      <input type="text" size="10" name="face" value="">
+      <input type="button" value="move" onclick="showtime()">
+      <input type="button" value="stop" onclick="stopclock()">
+    </form>
+  </body>
+</html>

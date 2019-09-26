@@ -1,0 +1,34 @@
+<html>
+  <head><title>내장함수</title>
+  </head>
+  <body>
+      <script language="javascript">
+          // eval()함수
+        document.write(eval("10+20")+"<p>")
+  
+          // parseInt()함수
+        num_1=parseInt("100")
+        num_2=parseInt("100",2)
+        document.write(num_1+"<br>"+num_2+"<br>")
+        document.write(parseInt("100",16)+"<p>")
+  
+          // parseFloat()함수
+        num_3=parseFloat("123.45")
+        document.write(num_3+"<br>")
+        document.write(parseFloat("12.3E3")+"<p>")
+  
+          // escape(), unescape()
+        document.write(escape("!")+"<br>")
+        document.write(unescape("%3F")+"<p>")
+  
+          // isNaN()함수
+        log_1=isNaN("123")
+        if(log_1==true){
+          document.write("숫자가 아닙니다.")
+        }
+        else{
+          document.write("숫자입니다.")
+        }
+      </script>
+  </body>
+</html>

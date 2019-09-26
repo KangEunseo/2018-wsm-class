@@ -1,0 +1,65 @@
+<html>
+<title>성적처리</title>
+    <head><meta charset="utf-8"></head>
+<body>
+    <style>
+        div{
+            background-color: rgba(255, 255, 0, 0.53);
+            border:solid 2px dodgerblue;
+            border-width:5px;
+            width:800px;
+            text-align: center;
+            color:green;
+            font-size: 30px;
+            padding: 25px 50px;
+        }
+    </style>
+<script>
+    var score=0, cnt=1, sum=0; total=0; j=0;
+    //sum 개인점수, total 전체점수, j은 전체 점수개수
+    document.write("<center><div>성적처리결과</div></center><br><br>"); 
+    document.write("<hr color=blue width=90%>");   
+
+    for(i=0;i<3;i++){
+        name =prompt("name","홍길동");
+        if(name == ""){
+            alert("입력오류입니다. 이름을 넣어주세요");
+            name =prompt("name","홍길동");
+        }
+        document.write("<center><font color=blue size=6>"+name+"&nbsp&nbsp</font>");  
+        while(cnt<=3){
+            score = parseInt(prompt("score","0"));
+            log_1=isNaN(score)
+            if(log_1 == true){
+                alert("숫자가 아닙니다. 점수는 숫자(0~100)로 넣어주세요");
+            }
+            if(0<=score && score<=100){
+                sum=sum+score;
+                document.write("<font color=red size=6>과목"+cnt+":"+score+"&nbsp&nbsp");
+                cnt=cnt+1;
+                j=j+1;
+            }
+        }
+
+        document.write("과목종류:"+(cnt-1)+"&nbsp&nbsp성적총점:"+sum+"&nbsp&nbsp</font>");
+        num1=(sum/(cnt-1))  
+        document.write("<font color=green size=6>"+"성적평균:"+num1.toFixed(2)+"</font></center>");
+        total=total+sum;   
+        cnt=1;
+        sum=0;
+
+        if(i<2){        
+            document.write("<hr color=lightblue width=90%>");
+        }
+        else{
+            document.write("<hr color=blue width=90%><br>");
+        }      
+
+    }// 끝 - for 
+    
+        document.write("<center><div>전체총점:"+total+"&nbsp&nbsp");
+        num2=(total/j); 
+        document.write("전체평균:"+num2.toFixed(2)+"</div></center>");   
+</script>
+</body>
+</html>

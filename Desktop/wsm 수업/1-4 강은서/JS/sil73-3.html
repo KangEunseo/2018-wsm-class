@@ -1,0 +1,23 @@
+<html>
+  <head><title>함수호출</title>
+    <style>input{color:rgb(255, 14, 14)}</style>
+    <script language="javascript">
+      document.bgColor="pink";
+      function buttonClick(button){
+        alert(button.value+"을 주문하였습니다.");
+      }
+    </script>
+  </head>
+
+  <body>
+  <center>
+    <h2>====== Order ======</h2>
+    <input type="submit" value="Mango" onclick="buttonClick(this)">
+    <input type="submit" value="Watermelon" onclick="buttonClick(this)">
+    <input type="submit" value="Strawberry" onclick="buttonClick(this)">
+    <input type="submit" value="Melon" onclick="buttonClick(this)">
+    <input type="submit" value="Banana" onclick="buttonClick(this)">
+    <input type="submit" value="Mandarin" onclick="buttonClick(this)">
+  </center>
+  </body>
+</html>
